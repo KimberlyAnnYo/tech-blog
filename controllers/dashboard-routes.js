@@ -25,9 +25,9 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 
-router.get('/new', withAuth, (req, res) => {
+router.get('/createpost', withAuth, (req, res) => {
  
-  res.render('new-post', {
+  res.render('createpost', {
   });
 });
 
