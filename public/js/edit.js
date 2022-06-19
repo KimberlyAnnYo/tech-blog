@@ -2,9 +2,7 @@ const postId = document.querySelector('input[name="post-id"]').value;
 console.log("testing");
 console.log(postId);
 
-// const id = window.location.toString().split('/')[
-//   window.location.toString().split('/').length - 1
-// ];
+
 
 const editFormHandler = async (event) => {
   event.preventDefault();
@@ -42,7 +40,7 @@ const deleteClickHandler = async () => {
 
   document.location.replace('/dashboard');
 };
-// WHY ONE BUTTON IS SUBMIT AND THE OTHER IS CLICK?
+
 document
   .querySelector('#edit-post-form')
   .addEventListener('submit', editFormHandler);

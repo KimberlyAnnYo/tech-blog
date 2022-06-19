@@ -1,29 +1,21 @@
-<a href="/dashboard" class="go-back"> &larr; Back to dashboard</a>
+<form class="create-post-form">
+  <div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" />
+  </div>
+  <div>
+    <label for="post">post:</label>
+    <input type="textera" id="post" />
+  </div>
+  <div>
+    <button type="submit">post</button>
+  </div>
+  <div> 
+      <button type="button" id="delete">Delete</button>
+  </div>
+</form>
 
-<article class="new-page">
-    <section class="edit-form-page">
-        <div class="form-heading">
-            <h2>
-                Edit Post
-            </h2>
-        </div>
-        <div class="form-section">
-            <form class="edit-post-form">
-                <div class="post-title-section">
-                    <label for="post-title">Title</label>
-                    <input type="text" name="post-title" id="post-title" value="{{post.title}}" />
-                </div>
-                <div class="post-content">
-                    <label for="post-content">Content</label>
-                    <textarea class="entry-field" id="post-content" name="post-content">{{post.content}}</textarea>
-                </div>
-                <button type="submit">Update post</button>
-                <button type="button" class="delete-post-btn">Delete post</button>
-            </form>
-        </div>
-    </section>
-</article>
 
 {{#if loggedIn}}
-<script src="/public/js/edit.js"></script>
+<script src="/js/edit.js"></script>
 {{/if}}
