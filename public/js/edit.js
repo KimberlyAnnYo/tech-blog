@@ -29,7 +29,8 @@ const editFormHandler = async (event) => {
 };
 
 const deleteClickHandler = async () => {
-  await fetch(`/api/post/${postId}`, {
+  const postId = document.querySelector('#postId').value;
+  await fetch(`/api/posts/${postId}`, {
     method: 'DELETE'
   });
 
