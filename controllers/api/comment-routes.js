@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Comment } = require('../../models/');
+const Comment = require('../../models/comment');
+const User = require('../../models/user');
 const withAuth = require('../../utils/auth');
 
 router.get('/:id', withAuth, async (req, res) => {
@@ -18,6 +19,7 @@ router.get('/:id', withAuth, async (req, res) => {
   res.render('single-post', {comments, loggedIn: req.session.loggedIn});
 } catch(err) {
     res.status(500).json(err);
+    console.log(err)
 }
 });
 
