@@ -1,1 +1,1 @@
-# tech-blog
+# tech tech news
