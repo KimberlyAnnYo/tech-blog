@@ -16,7 +16,7 @@ router.get('/', withAuth, async (req, res) => {
     console.log(posts);
     
     res.render('dashboard', {
-      
+      loggedIn: req.session.loggedIn,
       posts,
     });
   } catch (err) {
