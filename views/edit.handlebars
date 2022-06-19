@@ -1,20 +1,22 @@
 <form class="create-post-form">
+<div>
+    <input id="postId" value="{{post.id}}" type="hidden"/>
+  </div>
   <div>
     <label for="title">Title:</label>
-    <input type="text" id="title" />
+    <input type="text" id="title" value="{{post.postTitle}}" />
   </div>
   <div>
     <label for="post">post:</label>
-    <input type="textera" id="post" />
+    <input type="textera" id="post" value="{{post.postContent}}" />
   </div>
   <div>
-    <button type="submit">post</button>
+    <button type="button" id="edit">post</button>
   </div>
   <div> 
       <button type="button" id="delete">Delete</button>
   </div>
 </form>
-
 
 {{#if loggedIn}}
 <script src="/js/edit.js"></script>
