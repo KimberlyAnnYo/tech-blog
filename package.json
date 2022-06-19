@@ -6,7 +6,8 @@
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "start": "node server.js",
-      "seed": "node seeds/index.js"
+      "seed": "node seeds/index.js",
+      "heroku-postbuild": "echo 'JAWSDB_URL=mysql://p26qwiv1fp1sjbyz:if7oivepcocsp2mo@qz8si2yulh3i7gl3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/toob3wiusha8mgt7' > .env"
     },
     "keywords": [],
     "author": "",

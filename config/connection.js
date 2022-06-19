@@ -1,4 +1,7 @@
 const Sequelize = require('sequelize');
+mysql://p26qwiv1fp1sjbyz:if7oivepcocsp2mo@qz8si2yulh3i7gl3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/toob3wiusha8mgt7
+
+
 
 require('dotenv').config();
 
