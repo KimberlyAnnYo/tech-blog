@@ -2,10 +2,13 @@ const router = require('express').Router();
 const { Comment } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
  try{ 
   const commentData = await Comment.findAll({
     include: [User],
+    where: {
+      postId: req.params.id,
+    },
   });
 // serialize the data
   const comments = commentData.map((comment) => comment.get({ plain: true }));
