@@ -15,7 +15,14 @@
 </form>
 {{/if}}
 
-{{> comments comments}}
+<ul>
+  {{#each comments as |comment|}}
+        <li>
+          {{comment.commentContent}}
+        </li>
+        {{/each}}
+</ul>
+
 
 {{#if loggedIn}}
 <script src="/js/comment.js"></script>
