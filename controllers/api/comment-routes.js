@@ -16,7 +16,7 @@ router.get('/:id', withAuth, async (req, res) => {
 
   console.log(comments);
   
-  res.render('single-post', {comments, loggedIn: req.session.loggedIn});
+  res.render('single-post', {comments, postId:req.params.id, loggedIn: req.session.loggedIn});
 } catch(err) {
     res.status(500).json(err);
     console.log(err)
@@ -26,6 +26,7 @@ router.get('/:id', withAuth, async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
   const body = req.body;
 
+  console.log(body);
   try {
     const newComment = await Comment.create({
       ...body,
