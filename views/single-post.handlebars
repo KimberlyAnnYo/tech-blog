@@ -18,7 +18,9 @@
 <ul>
   {{#each comments as |comment|}}
         <li>
-          {{comment.commentContent}}
+        <h4>{{comment.user.username}}</h4>
+         <h4>{{comment.dateCreated}}</h4>
+        <p>{{comment.commentContent}}</p>
         </li>
         {{/each}}
 </ul>
